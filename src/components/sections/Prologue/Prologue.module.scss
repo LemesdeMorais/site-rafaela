@@ -7,18 +7,7 @@
   min-height: calc(72svh - (var(--space-4xl) * 2));
 
   text-align: center;
-}
 
-.eyebrow {
-  margin: 0;
-
-  color: var(--color-secondary);
-  font-size: var(--text-sm);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.prologue {
   h1 {
     max-width: 850px;
     margin: 0;
@@ -32,6 +21,16 @@
     text-wrap: balance;
   }
 }
+
+.eyebrow {
+  margin: 0;
+
+  color: var(--color-secondary);
+  font-size: var(--text-sm);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
 
 .description {
   max-width: 650px;

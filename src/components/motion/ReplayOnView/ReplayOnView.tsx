@@ -24,8 +24,10 @@ export function ReplayOnView({
 }: ReplayOnViewProps) {
   const elementRef = useRef<HTMLDivElement>(null);
   const wasVisibleRef = useRef(false);
+  const hasEnteredRef = useRef(false);
 
   const [animationKey, setAnimationKey] = useState(0);
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     const element = elementRef.current;
@@ -45,7 +47,12 @@ export function ReplayOnView({
           entry.intersectionRatio >= threshold;
 
         if (isVisible && !wasVisibleRef.current) {
-          restartAnimations();
+          if (!hasEnteredRef.current) {
+            hasEnteredRef.current = true;
+            setIsReady(true);
+          } else {
+            restartAnimations();
+          }
         }
 
         wasVisibleRef.current = isVisible;
@@ -68,7 +75,7 @@ export function ReplayOnView({
             mutation.attributeName === "data-theme",
         );
 
-        if (themeChanged) {
+        if (themeChanged && hasEnteredRef.current) {
           restartAnimations();
         }
       });
@@ -92,6 +99,13 @@ export function ReplayOnView({
     .filter(Boolean)
     .join(" ");
 
+  const contentClassName = [
+    styles.content,
+    !isReady && styles.pending,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <div
       {...props}
@@ -100,7 +114,7 @@ export function ReplayOnView({
     >
       <div
         key={animationKey}
-        className={styles.content}
+        className={contentClassName}
       >
         {children}
       </div>

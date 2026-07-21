@@ -1,1 +1,1 @@
-export * from "./Reveal";
+export { Reveal } from "./Reveal";

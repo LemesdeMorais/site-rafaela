@@ -1,30 +1,41 @@
-import type { ReactNode } from "react";
-import { motion } from "framer-motion";
+import type {
+  CSSProperties,
+  HTMLAttributes,
+} from "react";
 
-interface RevealProps {
-  children: ReactNode;
+import styles from "./Reveal.module.scss";
+
+interface RevealProps
+  extends HTMLAttributes<HTMLDivElement> {
   delay?: number;
-  className?: string;
 }
 
 export function Reveal({
   children,
   delay = 0,
   className,
+  style,
+  ...props
 }: RevealProps) {
+  const combinedClassName = [
+    styles.reveal,
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  const revealStyle = {
+    ...style,
+    "--reveal-delay": `${delay}s`,
+  } as CSSProperties;
+
   return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, y: 36, filter: "blur(10px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{
-        duration: 0.8,
-        delay,
-        ease: [0.22, 1, 0.36, 1],
-      }}
+    <div
+      {...props}
+      className={combinedClassName}
+      style={revealStyle}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

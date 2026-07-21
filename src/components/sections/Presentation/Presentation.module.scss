@@ -175,13 +175,13 @@
 .innerOrbit {
   position: absolute;
 
-  border-radius: 50%;
   border: 1px solid
     color-mix(
       in srgb,
       var(--color-text) 7%,
       transparent
     );
+  border-radius: 50%;
 }
 
 .orbit {
@@ -684,7 +684,7 @@
   .visual {
     position: absolute;
     top: 5%;
-    right: -15%;
+    right: -8%;
 
     width: min(70vw, 32rem);
 
@@ -693,7 +693,7 @@
 
   .glow {
     top: 9%;
-    right: -24%;
+    right: -12%;
 
     width: min(72vw, 32rem);
 
@@ -771,38 +771,47 @@
   }
 
   .visual {
-    top: 6%;
-    right: -50%;
+    top: 12%;
+    right: -4%;
 
-    width: 30rem;
+    width: min(94vw, 26rem);
 
     opacity: 0.42;
   }
 
   .glow {
-    top: 6%;
-    right: -55%;
+    top: 10%;
+    right: -8%;
 
-    width: 28rem;
+    width: min(94vw, 26rem);
 
     opacity: 0.32;
   }
 
   .signature {
+    top: 40%;
+    left: 58%;
+
+    width: 100%;
+
     transform:
       translate(-50%, -50%)
       rotate(-8deg)
-      scale(0.8);
+      scale(0.72);
   }
 
   .signatureRafaela {
-    font-size: 5.5rem;
+    top: 0;
+    left: 50%;
+
+    font-size: 5.25rem;
   }
 
   .signatureLemes {
     top: 38%;
+    left: 50%;
 
-    font-size: 4.75rem;
+    font-size: 4.5rem;
   }
 
   .signatureFlourish {
@@ -813,7 +822,7 @@
   }
 
   .backgroundName {
-    font-size: 5.7rem;
+    font-size: 5.2rem;
 
     color: color-mix(
       in srgb,
