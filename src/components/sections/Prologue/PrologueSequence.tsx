@@ -8,10 +8,7 @@ export function PrologueSequence() {
     <div className={styles.sequence}>
       <DrawLine />
 
-      <RevealText
-        firstLine="Toda grande ideia"
-        secondLine="começa pequena."
-      />
+      <RevealText firstLine="Toda grande ideia" secondLine="começa pequena." />
     </div>
   );
 }

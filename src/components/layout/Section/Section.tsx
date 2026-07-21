@@ -6,15 +6,9 @@ interface SectionProps {
   id?: string;
 }
 
-export function Section({
-  children,
-  id,
-}: SectionProps) {
+export function Section({ children, id }: SectionProps) {
   return (
-    <section
-      id={id}
-      className={styles.section}
-    >
+    <section id={id} className={styles.section}>
       {children}
     </section>
   );

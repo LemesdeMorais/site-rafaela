@@ -27,15 +27,12 @@ interface Spark {
   size: number;
 }
 
-export function PointerEffects({
-  children,
-}: PointerEffectsProps) {
+export function PointerEffects({ children }: PointerEffectsProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const sparkIdRef = useRef(0);
   const lastSparkAtRef = useRef(0);
 
-  const [isPointerActive, setIsPointerActive] =
-    useState(false);
+  const [isPointerActive, setIsPointerActive] = useState(false);
 
   const [pointerPosition, setPointerPosition] = useState({
     x: 0,
@@ -58,9 +55,7 @@ export function PointerEffects({
     };
   }, [sparks]);
 
-  function handlePointerMove(
-    event: ReactPointerEvent<HTMLDivElement>,
-  ) {
+  function handlePointerMove(event: ReactPointerEvent<HTMLDivElement>) {
     if (event.pointerType === "touch") {
       return;
     }
@@ -90,15 +85,10 @@ export function PointerEffects({
       size: 2 + Math.random() * 3,
     };
 
-    setSparks((current) => [
-      ...current.slice(-10),
-      spark,
-    ]);
+    setSparks((current) => [...current.slice(-10), spark]);
   }
 
-  function handlePointerEnter(
-    event: ReactPointerEvent<HTMLDivElement>,
-  ) {
+  function handlePointerEnter(event: ReactPointerEvent<HTMLDivElement>) {
     if (event.pointerType === "touch") {
       return;
     }
@@ -123,23 +113,15 @@ export function PointerEffects({
   return (
     <div
       ref={wrapperRef}
-      className={`${styles.wrapper} ${
-        isPointerActive ? styles.pointerActive : ""
-      }`}
+      className={`${styles.wrapper} ${isPointerActive ? styles.pointerActive : ""}`}
       style={pointerStyle}
       onPointerMove={handlePointerMove}
       onPointerEnter={handlePointerEnter}
       onPointerLeave={handlePointerLeave}
     >
-      <div
-        className={styles.pointerGlow}
-        aria-hidden="true"
-      />
+      <div className={styles.pointerGlow} aria-hidden="true" />
 
-      <div
-        className={styles.sparkLayer}
-        aria-hidden="true"
-      >
+      <div className={styles.sparkLayer} aria-hidden="true">
         {sparks.map((spark) => (
           <span
             key={spark.id}

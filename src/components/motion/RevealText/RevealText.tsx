@@ -9,11 +9,7 @@ interface RevealTextProps {
   delay?: number;
 }
 
-export function RevealText({
-  firstLine,
-  secondLine,
-  delay = 1.6,
-}: RevealTextProps) {
+export function RevealText({ firstLine, secondLine, delay = 1.6 }: RevealTextProps) {
   const maskRef = useRef<SVGRectElement>(null);
   const penRef = useRef<SVGCircleElement>(null);
 
@@ -78,22 +74,12 @@ export function RevealText({
     >
       <defs>
         <clipPath id={clipId}>
-          <rect
-            ref={maskRef}
-            x="70"
-            y="20"
-            width="0"
-            height="210"
-          />
+          <rect ref={maskRef} x="70" y="20" width="0" height="210" />
         </clipPath>
       </defs>
 
       <g clipPath={`url(#${clipId})`}>
-        <text
-          className={styles.text}
-          x="70"
-          y={secondLine ? "105" : "145"}
-        >
+        <text className={styles.text} x="70" y={secondLine ? "105" : "145"}>
           {firstLine}
         </text>
 
@@ -104,13 +90,7 @@ export function RevealText({
         )}
       </g>
 
-      <circle
-        ref={penRef}
-        className={styles.pen}
-        cx="70"
-        cy={secondLine ? "190" : "145"}
-        r="7"
-      />
+      <circle ref={penRef} className={styles.pen} cx="70" cy={secondLine ? "190" : "145"} r="7" />
     </svg>
   );
 }

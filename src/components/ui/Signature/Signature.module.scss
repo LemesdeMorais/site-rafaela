@@ -5,14 +5,7 @@
 
   color: var(--color-primary);
 
-  filter: drop-shadow(
-    0 0 2rem
-      color-mix(
-        in srgb,
-        var(--color-primary) 22%,
-        transparent
-      )
-  );
+  filter: drop-shadow(0 0 2rem color-mix(in srgb, var(--color-primary) 22%, transparent));
 
   transform: rotate(-6deg);
 }
@@ -31,8 +24,7 @@
   stroke-dasharray: 1800;
   stroke-dashoffset: 1800;
 
-  animation: drawSignature 2.2s
-    cubic-bezier(0.22, 1, 0.36, 1) 500ms forwards;
+  animation: drawSignature 2.2s cubic-bezier(0.22, 1, 0.36, 1) 500ms forwards;
 }
 
 .accent {
@@ -44,8 +36,7 @@
 
   opacity: 0.75;
 
-  animation: drawAccent 1s
-    cubic-bezier(0.22, 1, 0.36, 1) 1.75s forwards;
+  animation: drawAccent 1s cubic-bezier(0.22, 1, 0.36, 1) 1.75s forwards;
 }
 
 @keyframes drawSignature {

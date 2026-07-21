@@ -11,15 +11,13 @@ export function Prologue() {
     <Section>
       <Container>
         <ReplayOnView className={styles.prologue}>
-          <span className={styles.eyebrow}>
-            O primeiro traço
-          </span>
+          <span className={styles.eyebrow}>O primeiro traço</span>
 
           <PrologueSequence />
 
           <p className={styles.description}>
-            Antes de virar site, sistema ou presença digital, tudo começa
-            com uma ideia que merece sair do papel.
+            Antes de virar site, sistema ou presença digital, tudo começa com uma ideia que merece
+            sair do papel.
           </p>
         </ReplayOnView>
       </Container>

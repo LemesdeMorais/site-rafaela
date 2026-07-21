@@ -27,10 +27,7 @@
   pointer-events: none;
 
   background-image:
-    linear-gradient(
-      color-mix(in srgb, var(--color-text) 2.5%, transparent) 1px,
-      transparent 1px
-    ),
+    linear-gradient(color-mix(in srgb, var(--color-text) 2.5%, transparent) 1px, transparent 1px),
     linear-gradient(
       90deg,
       color-mix(in srgb, var(--color-text) 2.5%, transparent) 1px,
@@ -39,17 +36,9 @@
 
   background-size: 48px 48px;
 
-  mask-image: radial-gradient(
-    circle at center,
-    black 35%,
-    transparent 90%
-  );
+  mask-image: radial-gradient(circle at center, black 35%, transparent 90%);
 
-  -webkit-mask-image: radial-gradient(
-    circle at center,
-    black 35%,
-    transparent 90%
-  );
+  -webkit-mask-image: radial-gradient(circle at center, black 35%, transparent 90%);
 }
 
 .app > * {
@@ -61,17 +50,9 @@
   .app::before {
     background-size: 36px 36px;
 
-    mask-image: radial-gradient(
-      circle at center,
-      black 20%,
-      transparent 80%
-    );
+    mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
 
-    -webkit-mask-image: radial-gradient(
-      circle at center,
-      black 20%,
-      transparent 80%
-    );
+    -webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
   }
 }
 

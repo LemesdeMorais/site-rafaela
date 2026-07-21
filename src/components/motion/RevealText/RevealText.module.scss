@@ -13,9 +13,7 @@
 
 .pen {
   fill: var(--color-primary);
-  filter:
-    drop-shadow(0 0 8px var(--color-primary))
-    drop-shadow(0 0 20px var(--color-glow));
+  filter: drop-shadow(0 0 8px var(--color-primary)) drop-shadow(0 0 20px var(--color-glow));
 }
 
 @media (max-width: 768px) {

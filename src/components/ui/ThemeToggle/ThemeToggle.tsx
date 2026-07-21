@@ -11,9 +11,7 @@ function getInitialTheme(): Theme {
     return savedTheme;
   }
 
-  return window.matchMedia("(prefers-color-scheme: light)").matches
-    ? "light"
-    : "dark";
+  return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
 }
 
 export function ThemeToggle() {
@@ -27,9 +25,7 @@ export function ThemeToggle() {
   const isLight = theme === "light";
 
   function toggleTheme() {
-    setTheme((currentTheme) =>
-      currentTheme === "dark" ? "light" : "dark",
-    );
+    setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark"));
   }
 
   return (
@@ -37,20 +33,14 @@ export function ThemeToggle() {
       className={styles.toggle}
       type="button"
       onClick={toggleTheme}
-      aria-label={
-        isLight ? "Ativar tema escuro" : "Ativar tema claro"
-      }
+      aria-label={isLight ? "Ativar tema escuro" : "Ativar tema claro"}
       aria-pressed={isLight}
     >
       <span className={styles.icon} aria-hidden="true">
         ☀
       </span>
 
-      <span
-        className={`${styles.thumb} ${
-          isLight ? styles.thumbLight : ""
-        }`}
-      />
+      <span className={`${styles.thumb} ${isLight ? styles.thumbLight : ""}`} />
 
       <span className={styles.icon} aria-hidden="true">
         ☾

@@ -17,24 +17,14 @@
 
   background: radial-gradient(
     circle,
-    color-mix(
-      in srgb,
-      var(--color-primary) 12%,
-      transparent
-    ) 0%,
-    color-mix(
-      in srgb,
-      var(--color-secondary) 5%,
-      transparent
-    ) 38%,
+    color-mix(in srgb, var(--color-primary) 12%, transparent) 0%,
+    color-mix(in srgb, var(--color-secondary) 5%, transparent) 38%,
     transparent 72%
   );
 
   opacity: 0;
 
-  transform:
-    translate3d(var(--pointer-x), var(--pointer-y), 0)
-    translate(-50%, -50%);
+  transform: translate3d(var(--pointer-x), var(--pointer-y), 0) translate(-50%, -50%);
 
   transition: opacity 280ms ease;
 
@@ -66,18 +56,8 @@
   background: var(--color-secondary);
 
   box-shadow:
-    0 0 0.45rem
-      color-mix(
-        in srgb,
-        var(--color-secondary) 70%,
-        transparent
-      ),
-    0 0 0.9rem
-      color-mix(
-        in srgb,
-        var(--color-primary) 45%,
-        transparent
-      );
+    0 0 0.45rem color-mix(in srgb, var(--color-secondary) 70%, transparent),
+    0 0 0.9rem color-mix(in srgb, var(--color-primary) 45%, transparent);
 
   animation: sparkFall 700ms ease-out forwards;
 }
@@ -86,9 +66,7 @@
   0% {
     opacity: 0;
 
-    transform:
-      translate(-50%, -50%)
-      scale(0.25);
+    transform: translate(-50%, -50%) scale(0.25);
   }
 
   20% {
@@ -98,12 +76,7 @@
   100% {
     opacity: 0;
 
-    transform:
-      translate(
-        calc(-50% + var(--spark-x)),
-        calc(-50% + var(--spark-y))
-      )
-      scale(0);
+    transform: translate(calc(-50% + var(--spark-x)), calc(-50% + var(--spark-y))) scale(0);
   }
 }
 

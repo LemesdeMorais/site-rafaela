@@ -50,14 +50,14 @@ Cada espaço, transição, contraste e gesto visual foi pensado para unir **clar
 
 ## Destaques
 
-| Experiência | Engenharia |
-|---|---|
-| Tema claro e escuro | React + TypeScript |
-| Assinatura visual exclusiva | SCSS Modules |
-| Motion cinematográfico | Componentização escalável |
-| Replay de animações na viewport | Tokens e variáveis CSS |
-| Pointer effects globais | ESLint + Prettier |
-| Responsividade cuidadosa | Build com Vite |
+| Experiência                         | Engenharia                        |
+| ----------------------------------- | --------------------------------- |
+| Tema claro e escuro                 | React + TypeScript                |
+| Assinatura visual exclusiva         | SCSS Modules                      |
+| Motion cinematográfico              | Componentização escalável         |
+| Replay de animações na viewport     | Tokens e variáveis CSS            |
+| Pointer effects globais             | ESLint + Prettier                 |
+| Responsividade cuidadosa            | Build com Vite                    |
 | Respeito a `prefers-reduced-motion` | Estrutura preparada para evolução |
 
 ---
@@ -212,12 +212,12 @@ npm run preview
 
 ## Scripts
 
-| Comando | Ação |
-|---|---|
-| `npm run dev` | Inicia o ambiente de desenvolvimento |
-| `npm run build` | Gera o build de produção |
-| `npm run preview` | Executa o build localmente |
-| `npm run lint` | Verifica padrões e problemas de código |
+| Comando           | Ação                                   |
+| ----------------- | -------------------------------------- |
+| `npm run dev`     | Inicia o ambiente de desenvolvimento   |
+| `npm run build`   | Gera o build de produção               |
+| `npm run preview` | Executa o build localmente             |
+| `npm run lint`    | Verifica padrões e problemas de código |
 
 ---
 

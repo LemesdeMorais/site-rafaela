@@ -51,11 +51,7 @@
 
     background: linear-gradient(
       90deg,
-      color-mix(
-        in srgb,
-        var(--color-primary) 8%,
-        transparent
-      ),
+      color-mix(in srgb, var(--color-primary) 8%, transparent),
       transparent 70%
     );
 

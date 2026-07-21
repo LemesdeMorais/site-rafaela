@@ -75,8 +75,7 @@
     transform: scaleX(0);
     transform-origin: left center;
 
-    animation: revealUnderline 1.2s
-      cubic-bezier(0.22, 1, 0.36, 1) 1.25s forwards;
+    animation: revealUnderline 1.2s cubic-bezier(0.22, 1, 0.36, 1) 1.25s forwards;
   }
 }
 
@@ -101,8 +100,7 @@
 
     transform-origin: left center;
 
-    animation: tagLine 1s
-      cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+    animation: tagLine 1s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
   }
 }
 
@@ -152,16 +150,8 @@
 
   background: radial-gradient(
     circle at 48% 46%,
-    color-mix(
-      in srgb,
-      var(--color-primary) 22%,
-      transparent
-    ),
-    color-mix(
-      in srgb,
-      var(--color-secondary) 8%,
-      transparent
-    ) 40%,
+    color-mix(in srgb, var(--color-primary) 22%, transparent),
+    color-mix(in srgb, var(--color-secondary) 8%, transparent) 40%,
     transparent 72%
   );
 
@@ -175,12 +165,7 @@
 .innerOrbit {
   position: absolute;
 
-  border: 1px solid
-    color-mix(
-      in srgb,
-      var(--color-text) 7%,
-      transparent
-    );
+  border: 1px solid color-mix(in srgb, var(--color-text) 7%, transparent);
   border-radius: 50%;
 }
 
@@ -195,11 +180,7 @@
 .innerOrbit {
   inset: 19% 15% 18% 17%;
 
-  border-color: color-mix(
-    in srgb,
-    var(--color-primary) 11%,
-    transparent
-  );
+  border-color: color-mix(in srgb, var(--color-primary) 11%, transparent);
 
   transform: rotate(24deg);
 
@@ -218,18 +199,8 @@
   background: var(--color-secondary);
 
   box-shadow:
-    0 0 0 0.4rem
-      color-mix(
-        in srgb,
-        var(--color-secondary) 10%,
-        transparent
-      ),
-    0 0 1.5rem
-      color-mix(
-        in srgb,
-        var(--color-secondary) 65%,
-        transparent
-      );
+    0 0 0 0.4rem color-mix(in srgb, var(--color-secondary) 10%, transparent),
+    0 0 1.5rem color-mix(in srgb, var(--color-secondary) 65%, transparent);
 }
 
 .backgroundName {
@@ -241,11 +212,7 @@
   display: flex;
   flex-direction: column;
 
-  color: color-mix(
-    in srgb,
-    var(--color-text) 1.25%,
-    transparent
-  );
+  color: color-mix(in srgb, var(--color-text) 1.25%, transparent);
 
   font-family: var(--font-primary);
   font-size: clamp(4.7rem, 8.6vw, 7.6rem);
@@ -276,23 +243,8 @@
 
   transform: translate(-50%, -50%) rotate(-8deg);
 
-  filter:
-    drop-shadow(
-      0 0 0.45rem
-        color-mix(
-          in srgb,
-          var(--color-primary) 16%,
-          transparent
-        )
-    )
-    drop-shadow(
-      0 0 1rem
-        color-mix(
-          in srgb,
-          var(--color-secondary) 7%,
-          transparent
-        )
-    );
+  filter: drop-shadow(0 0 0.45rem color-mix(in srgb, var(--color-primary) 16%, transparent))
+    drop-shadow(0 0 1rem color-mix(in srgb, var(--color-secondary) 7%, transparent));
 }
 
 .signatureRafaela,
@@ -313,11 +265,7 @@
   background: linear-gradient(
     102deg,
     var(--color-primary) 4%,
-    color-mix(
-      in srgb,
-      var(--color-primary) 62%,
-      var(--color-secondary)
-    ) 57%,
+    color-mix(in srgb, var(--color-primary) 62%, var(--color-secondary)) 57%,
     var(--color-secondary) 100%
   );
 
@@ -340,8 +288,7 @@
 
   transform: translateX(-54%) translateY(0.55rem);
 
-  animation: revealRafaela 1.65s
-    cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards;
+  animation: revealRafaela 1.65s cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards;
 }
 
 .signatureLemes {
@@ -352,8 +299,7 @@
 
   transform: translateX(-33%) translateY(0.55rem);
 
-  animation: revealLemes 1.5s
-    cubic-bezier(0.22, 1, 0.36, 1) 1.03s forwards;
+  animation: revealLemes 1.5s cubic-bezier(0.22, 1, 0.36, 1) 1.03s forwards;
 }
 
 .signatureFlourish {
@@ -370,8 +316,7 @@
   transform: rotate(-7deg) scaleX(0);
   transform-origin: left center;
 
-  animation: revealFlourish 1.05s
-    cubic-bezier(0.22, 1, 0.36, 1) 2.02s forwards;
+  animation: revealFlourish 1.05s cubic-bezier(0.22, 1, 0.36, 1) 2.02s forwards;
 
   &::before {
     content: "";
@@ -386,25 +331,14 @@
 
     background: linear-gradient(
       90deg,
-      color-mix(
-        in srgb,
-        var(--color-secondary) 85%,
-        var(--color-primary)
-      ),
+      color-mix(in srgb, var(--color-secondary) 85%, var(--color-primary)),
       var(--color-primary) 68%,
       transparent 100%
     );
 
     transform: translateY(-50%) skewX(-22deg);
 
-    filter: drop-shadow(
-      0 0 0.45rem
-        color-mix(
-          in srgb,
-          var(--color-primary) 34%,
-          transparent
-        )
-    );
+    filter: drop-shadow(0 0 0.45rem color-mix(in srgb, var(--color-primary) 34%, transparent));
   }
 
   &::after {
@@ -417,12 +351,7 @@
     width: 2.2rem;
     height: 0.72rem;
 
-    border-top: 1.5px solid
-      color-mix(
-        in srgb,
-        var(--color-primary) 82%,
-        var(--color-secondary)
-      );
+    border-top: 1.5px solid color-mix(in srgb, var(--color-primary) 82%, var(--color-secondary));
 
     border-radius: 50%;
 
@@ -431,7 +360,10 @@
 }
 
 .visualIndex,
-.visualLabel,
+.visualLabel {
+  display: flex;
+  flex-direction: column;
+}
 .coordinates {
   position: absolute;
   z-index: 3;
@@ -497,11 +429,7 @@
 
     overflow: hidden;
 
-    background: color-mix(
-      in srgb,
-      var(--color-text) 14%,
-      transparent
-    );
+    background: color-mix(in srgb, var(--color-text) 14%, transparent);
 
     &::after {
       content: "";
@@ -703,18 +631,11 @@
   .signature {
     width: 100%;
 
-    transform:
-      translate(-50%, -50%)
-      rotate(-8deg)
-      scale(0.92);
+    transform: translate(-50%, -50%) rotate(-8deg) scale(0.92);
   }
 
   .backgroundName {
-    color: color-mix(
-      in srgb,
-      var(--color-text) 1.45%,
-      transparent
-    );
+    color: color-mix(in srgb, var(--color-text) 1.45%, transparent);
   }
 
   .scrollHint {
@@ -794,10 +715,7 @@
 
     width: 100%;
 
-    transform:
-      translate(-50%, -50%)
-      rotate(-8deg)
-      scale(0.72);
+    transform: translate(-50%, -50%) rotate(-8deg) scale(0.72);
   }
 
   .signatureRafaela {
@@ -824,11 +742,7 @@
   .backgroundName {
     font-size: 5.2rem;
 
-    color: color-mix(
-      in srgb,
-      var(--color-text) 1.1%,
-      transparent
-    );
+    color: color-mix(in srgb, var(--color-text) 1.1%, transparent);
   }
 
   .visualLabel,

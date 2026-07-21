@@ -1,14 +1,8 @@
-import {
-  type HTMLAttributes,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { type HTMLAttributes, useEffect, useRef, useState } from "react";
 
 import styles from "./ReplayOnView.module.scss";
 
-interface ReplayOnViewProps
-  extends HTMLAttributes<HTMLDivElement> {
+interface ReplayOnViewProps extends HTMLAttributes<HTMLDivElement> {
   threshold?: number;
   rootMargin?: string;
   replayOnThemeChange?: boolean;
@@ -24,10 +18,8 @@ export function ReplayOnView({
 }: ReplayOnViewProps) {
   const elementRef = useRef<HTMLDivElement>(null);
   const wasVisibleRef = useRef(false);
-  const hasEnteredRef = useRef(false);
 
   const [animationKey, setAnimationKey] = useState(0);
-  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     const element = elementRef.current;
@@ -42,25 +34,18 @@ export function ReplayOnView({
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        const isVisible =
-          entry.isIntersecting &&
-          entry.intersectionRatio >= threshold;
+        const isVisible = entry.isIntersecting && entry.intersectionRatio >= threshold;
 
         if (isVisible && !wasVisibleRef.current) {
-          if (!hasEnteredRef.current) {
-            hasEnteredRef.current = true;
-            setIsReady(true);
-          } else {
-            restartAnimations();
-          }
+          restartAnimations();
         }
 
         wasVisibleRef.current = isVisible;
       },
       {
-        threshold: [0, threshold, 0.7],
+        threshold: [0, threshold],
         rootMargin,
-      },
+      }
     );
 
     observer.observe(element);
@@ -70,12 +55,10 @@ export function ReplayOnView({
     if (replayOnThemeChange) {
       themeObserver = new MutationObserver((mutations) => {
         const themeChanged = mutations.some(
-          (mutation) =>
-            mutation.type === "attributes" &&
-            mutation.attributeName === "data-theme",
+          (mutation) => mutation.type === "attributes" && mutation.attributeName === "data-theme"
         );
 
-        if (themeChanged && hasEnteredRef.current) {
+        if (themeChanged) {
           restartAnimations();
         }
       });
@@ -92,30 +75,11 @@ export function ReplayOnView({
     };
   }, [replayOnThemeChange, rootMargin, threshold]);
 
-  const combinedClassName = [
-    styles.replay,
-    className,
-  ]
-    .filter(Boolean)
-    .join(" ");
-
-  const contentClassName = [
-    styles.content,
-    !isReady && styles.pending,
-  ]
-    .filter(Boolean)
-    .join(" ");
+  const combinedClassName = [styles.replay, className].filter(Boolean).join(" ");
 
   return (
-    <div
-      {...props}
-      ref={elementRef}
-      className={combinedClassName}
-    >
-      <div
-        key={animationKey}
-        className={contentClassName}
-      >
+    <div {...props} ref={elementRef} className={combinedClassName}>
+      <div key={animationKey} className={styles.content}>
         {children}
       </div>
     </div>

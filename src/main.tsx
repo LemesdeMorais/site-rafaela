@@ -11,9 +11,6 @@ import "./index.scss";
 import "./index.scss";
 import App from "./App";
 
-
-
-
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />

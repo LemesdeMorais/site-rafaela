@@ -10,23 +10,12 @@ interface ButtonProps {
   rel?: string;
 }
 
-export function Button({
-  children,
-  href,
-  className,
-  target,
-  rel,
-}: ButtonProps) {
+export function Button({ children, href, className, target, rel }: ButtonProps) {
   const classes = `${styles.button} ${className ?? ""}`.trim();
 
   if (href) {
     return (
-      <a
-        className={classes}
-        href={href}
-        target={target}
-        rel={rel}
-      >
+      <a className={classes} href={href} target={target} rel={rel}>
         {children}
       </a>
     );

@@ -45,10 +45,7 @@ export function Header() {
       (entries) => {
         const visibleSection = entries
           .filter((entry) => entry.isIntersecting)
-          .sort(
-            (first, second) =>
-              second.intersectionRatio - first.intersectionRatio,
-          )[0];
+          .sort((first, second) => second.intersectionRatio - first.intersectionRatio)[0];
 
         if (visibleSection?.target.id) {
           setActiveSection(visibleSection.target.id);
@@ -57,7 +54,7 @@ export function Header() {
       {
         rootMargin: "-30% 0px -55% 0px",
         threshold: [0.1, 0.3, 0.6],
-      },
+      }
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -87,11 +84,7 @@ export function Header() {
   }
 
   return (
-    <header
-      className={`${styles.header} ${
-        isScrolled ? styles.scrolled : ""
-      }`}
-    >
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <a
         className={styles.logo}
         href="#apresentacao"
@@ -103,9 +96,7 @@ export function Header() {
 
       <nav
         id="main-navigation"
-        className={`${styles.nav} ${
-          isOpen ? styles.navOpen : ""
-        }`}
+        className={`${styles.nav} ${isOpen ? styles.navOpen : ""}`}
         aria-label="Navegação principal"
       >
         {links.map((link) => {
@@ -130,9 +121,7 @@ export function Header() {
         <ThemeToggle />
 
         <button
-          className={`${styles.menuButton} ${
-            isOpen ? styles.menuButtonOpen : ""
-          }`}
+          className={`${styles.menuButton} ${isOpen ? styles.menuButtonOpen : ""}`}
           type="button"
           aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
           aria-expanded={isOpen}
