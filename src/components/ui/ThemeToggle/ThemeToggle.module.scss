@@ -1,0 +1,109 @@
+.toggle {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1.5rem 2.25rem 1.5rem;
+  align-items: center;
+  justify-items: center;
+
+  width: 6rem;
+  min-height: 2.75rem;
+  padding: 0.25rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+
+  background: color-mix(
+    in srgb,
+    var(--color-surface) 82%,
+    transparent
+  );
+
+  color: var(--color-text);
+
+  box-shadow: 0 0.75rem 2.5rem
+    color-mix(in srgb, var(--color-background) 18%, transparent);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  transition:
+    border-color 200ms ease,
+    background 200ms ease,
+    transform 200ms ease;
+
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 3px;
+  }
+}
+
+.icon {
+  position: relative;
+  z-index: 2;
+
+  font-size: 0.9rem;
+  line-height: 1;
+
+  pointer-events: none;
+}
+
+.thumb {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+
+  width: 2.15rem;
+  height: 2.15rem;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-accent)
+  );
+
+  box-shadow: 0 0 1.25rem var(--color-glow);
+
+  transition:
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    background 200ms ease;
+}
+
+.thumbLight {
+  transform: translateX(3.2rem);
+}
+
+@media (max-width: 640px) {
+  .toggle {
+    width: 5.5rem;
+    min-height: 2.5rem;
+  }
+
+  .thumb {
+    top: 0.3rem;
+    left: 0.3rem;
+
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+
+  .thumbLight {
+    transform: translateX(2.95rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toggle,
+  .thumb {
+    transition: none;
+  }
+}

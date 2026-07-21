@@ -1,0 +1,93 @@
+.signature {
+  width: min(44vw, 34rem);
+  height: auto;
+  overflow: visible;
+
+  color: var(--color-primary);
+
+  filter: drop-shadow(
+    0 0 2rem
+      color-mix(
+        in srgb,
+        var(--color-primary) 22%,
+        transparent
+      )
+  );
+
+  transform: rotate(-6deg);
+}
+
+.stroke,
+.accent {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.stroke {
+  stroke-width: 9;
+
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+
+  animation: drawSignature 2.2s
+    cubic-bezier(0.22, 1, 0.36, 1) 500ms forwards;
+}
+
+.accent {
+  stroke: var(--color-secondary);
+  stroke-width: 5;
+
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+
+  opacity: 0.75;
+
+  animation: drawAccent 1s
+    cubic-bezier(0.22, 1, 0.36, 1) 1.75s forwards;
+}
+
+@keyframes drawSignature {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawAccent {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .signature {
+    width: min(78vw, 30rem);
+    opacity: 0.78;
+  }
+}
+
+@media (max-width: 640px) {
+  .signature {
+    width: 24rem;
+    opacity: 0.42;
+
+    transform: rotate(-8deg);
+  }
+
+  .stroke {
+    stroke-width: 8;
+  }
+
+  .accent {
+    stroke-width: 4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stroke,
+  .accent {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+}

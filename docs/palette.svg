@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1340" height="590" viewBox="0 0 1340 590" role="img" aria-labelledby="title desc">
+<title id="title">Color Palette</title>
+<desc id="desc">Premium visual asset for Rafaela Lemes portfolio README.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0b0b10"/>
+    <stop offset="55%" stop-color="#11111a"/>
+    <stop offset="100%" stop-color="#17131f"/>
+  </linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#b58cff"/>
+    <stop offset="100%" stop-color="#ff8ec7"/>
+  </linearGradient>
+  <radialGradient id="glow">
+    <stop offset="0%" stop-color="#b58cff" stop-opacity=".28"/>
+    <stop offset="60%" stop-color="#ff8ec7" stop-opacity=".08"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft"><feGaussianBlur stdDeviation="28"/></filter>
+  <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#000" flood-opacity=".45"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="url(#bg)"/>
+<text x="80" y="95" fill="#c5a9ff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="start" opacity="1">DESIGN SYSTEM</text><text x="80" y="150" fill="#f8f6ff" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="650" text-anchor="start" opacity="1">Paleta com contraste e atmosfera</text><rect x="80" y="235" width="180" height="250" rx="24" fill="#0B0B10" stroke="#ffffff22" stroke-width="1" opacity="1"/><text x="100" y="430" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="start" opacity="1">Background</text><text x="100" y="458" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" opacity="0.72">#0B0B10</text><rect x="285" y="235" width="180" height="250" rx="24" fill="#11111A" stroke="#ffffff22" stroke-width="1" opacity="1"/><text x="305" y="430" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="start" opacity="1">Surface</text><text x="305" y="458" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" opacity="0.72">#11111A</text><rect x="490" y="235" width="180" height="250" rx="24" fill="#F8F6FF" stroke="#ffffff22" stroke-width="1" opacity="1"/><text x="510" y="430" fill="#11111a" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="start" opacity="1">Text</text><text x="510" y="458" fill="#11111a" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" opacity="0.72">#F8F6FF</text><rect x="695" y="235" width="180" height="250" rx="24" fill="#AAA4B8" stroke="#ffffff22" stroke-width="1" opacity="1"/><text x="715" y="430" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="start" opacity="1">Muted</text><text x="715" y="458" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" opacity="0.72">#AAA4B8</text><rect x="900" y="235" width="180" height="250" rx="24" fill="#B58CFF" stroke="#ffffff22" stroke-width="1" opacity="1"/><text x="920" y="430" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="start" opacity="1">Primary</text><text x="920" y="458" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" opacity="0.72">#B58CFF</text><rect x="1105" y="235" width="180" height="250" rx="24" fill="#FF8EC7" stroke="#ffffff22" stroke-width="1" opacity="1"/><text x="1125" y="430" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="start" opacity="1">Secondary</text><text x="1125" y="458" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" text-anchor="start" opacity="0.72">#FF8EC7</text>
+</svg>

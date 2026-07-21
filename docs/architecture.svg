@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1340" height="680" viewBox="0 0 1340 680" role="img" aria-labelledby="title desc">
+<title id="title">Project Architecture</title>
+<desc id="desc">Premium visual asset for Rafaela Lemes portfolio README.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0b0b10"/>
+    <stop offset="55%" stop-color="#11111a"/>
+    <stop offset="100%" stop-color="#17131f"/>
+  </linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#b58cff"/>
+    <stop offset="100%" stop-color="#ff8ec7"/>
+  </linearGradient>
+  <radialGradient id="glow">
+    <stop offset="0%" stop-color="#b58cff" stop-opacity=".28"/>
+    <stop offset="60%" stop-color="#ff8ec7" stop-opacity=".08"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft"><feGaussianBlur stdDeviation="28"/></filter>
+  <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#000" flood-opacity=".45"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="url(#bg)"/>
+<text x="80" y="95" fill="#c5a9ff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="start" opacity="1">ARQUITETURA</text><text x="80" y="150" fill="#f8f6ff" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="650" text-anchor="start" opacity="1">Organização modular e escalável</text><rect x="80" y="230" width="250" height="110" rx="20" fill="#15151f" stroke="#312b3d" stroke-width="1" opacity="1"/><text x="104" y="272" fill="#f8f6ff" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start" opacity="1">APP</text><text x="104" y="302" fill="#8f899d" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" opacity="1">Composição principal</text><rect x="390" y="230" width="250" height="110" rx="20" fill="#15151f" stroke="#312b3d" stroke-width="1" opacity="1"/><text x="414" y="272" fill="#f8f6ff" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start" opacity="1">SECTIONS</text><text x="414" y="302" fill="#8f899d" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" opacity="1">Narrativa da página</text><rect x="700" y="230" width="250" height="110" rx="20" fill="#15151f" stroke="#312b3d" stroke-width="1" opacity="1"/><text x="724" y="272" fill="#f8f6ff" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start" opacity="1">COMPONENTS</text><text x="724" y="302" fill="#8f899d" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" opacity="1">Layout · UI · Motion</text><rect x="1010" y="230" width="250" height="110" rx="20" fill="#15151f" stroke="#312b3d" stroke-width="1" opacity="1"/><text x="1034" y="272" fill="#f8f6ff" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start" opacity="1">CONTENT</text><text x="1034" y="302" fill="#8f899d" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" opacity="1">Texto centralizado</text><rect x="235" y="450" width="250" height="110" rx="20" fill="#15151f" stroke="#312b3d" stroke-width="1" opacity="1"/><text x="259" y="492" fill="#f8f6ff" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start" opacity="1">HOOKS</text><text x="259" y="522" fill="#8f899d" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" opacity="1">Estado e comportamento</text><rect x="545" y="450" width="250" height="110" rx="20" fill="#15151f" stroke="#312b3d" stroke-width="1" opacity="1"/><text x="569" y="492" fill="#f8f6ff" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start" opacity="1">STYLES</text><text x="569" y="522" fill="#8f899d" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" opacity="1">Tokens · temas · SCSS</text><rect x="855" y="450" width="250" height="110" rx="20" fill="#15151f" stroke="#312b3d" stroke-width="1" opacity="1"/><text x="879" y="492" fill="#f8f6ff" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start" opacity="1">ASSETS</text><text x="879" y="522" fill="#8f899d" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" opacity="1">Mídia e identidade</text><path d="M330 285 H390 M640 285 H700 M950 285 H1010 M515 340 V405 H360 V450 M825 340 V405 H670 V450 M1135 340 V405 H980 V450" stroke="#b58cff" stroke-opacity=".35" fill="none" stroke-width="2"/>
+</svg>

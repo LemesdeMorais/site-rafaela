@@ -1,0 +1,82 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at top,
+      color-mix(in srgb, var(--color-primary) 18%, transparent),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      color-mix(in srgb, var(--color-secondary) 10%, transparent),
+      transparent 40%
+    ),
+    var(--color-background);
+
+  transition: background 300ms ease;
+}
+
+.app::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      color-mix(in srgb, var(--color-text) 2.5%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--color-text) 2.5%, transparent) 1px,
+      transparent 1px
+    );
+
+  background-size: 48px 48px;
+
+  mask-image: radial-gradient(
+    circle at center,
+    black 35%,
+    transparent 90%
+  );
+
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    black 35%,
+    transparent 90%
+  );
+}
+
+.app > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 640px) {
+  .app::before {
+    background-size: 36px 36px;
+
+    mask-image: radial-gradient(
+      circle at center,
+      black 20%,
+      transparent 80%
+    );
+
+    -webkit-mask-image: radial-gradient(
+      circle at center,
+      black 20%,
+      transparent 80%
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app {
+    transition: none;
+  }
+}

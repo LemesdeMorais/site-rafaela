@@ -1,0 +1,151 @@
+.header {
+  max-width: 760px;
+  margin-bottom: var(--space-3xl);
+
+  span {
+    color: var(--color-secondary);
+    font-size: var(--text-sm);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: var(--space-md) 0 0;
+    font-size: var(--text-3xl);
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.card {
+  padding: var(--space-2xl);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background: color-mix(
+    in srgb,
+    var(--color-surface) 55%,
+    transparent
+  );
+
+  transition:
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 350ms ease,
+    box-shadow 350ms ease,
+    background 350ms ease;
+
+  small {
+    color: var(--color-secondary);
+    font-size: var(--text-sm);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    margin: var(--space-md) 0;
+    color: var(--color-text);
+    font-size: var(--text-2xl);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+
+  strong {
+    display: block;
+    margin-top: var(--space-lg);
+    margin-bottom: 0.4rem;
+    color: var(--color-text);
+  }
+
+  p {
+    max-width: 720px;
+    margin: 0;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+
+  color: var(--color-text);
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    color 200ms ease,
+    gap 200ms ease;
+
+  &:hover {
+    color: var(--color-secondary);
+    gap: var(--space-md);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 5px;
+    border-radius: 0.25rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: translateY(-6px);
+    border-color: color-mix(
+      in srgb,
+      var(--color-primary) 65%,
+      var(--color-border)
+    );
+
+    background: color-mix(
+      in srgb,
+      var(--color-surface) 78%,
+      transparent
+    );
+
+    box-shadow: 0 1.5rem 4rem
+      color-mix(in srgb, var(--color-glow) 35%, transparent);
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    margin-bottom: 2.5rem;
+
+    h2 {
+      font-size: clamp(2.1rem, 10vw, 3rem);
+    }
+  }
+
+  .grid {
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1.75rem;
+    border-radius: 1.25rem;
+
+    h3 {
+      font-size: 1.65rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .link {
+    transition: none;
+  }
+}

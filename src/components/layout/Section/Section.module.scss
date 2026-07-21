@@ -1,0 +1,14 @@
+.section {
+  width: 100%;
+  padding-block: var(--space-4xl);
+
+  /* Compensa a altura do Header fixo */
+  scroll-margin-top: 7rem;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-block: 4.5rem;
+    scroll-margin-top: 6rem;
+  }
+}

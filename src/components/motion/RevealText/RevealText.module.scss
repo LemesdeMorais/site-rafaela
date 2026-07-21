@@ -1,0 +1,25 @@
+.reveal {
+  width: min(100%, 72rem);
+  overflow: visible;
+}
+
+.text {
+  fill: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.pen {
+  fill: var(--color-primary);
+  filter:
+    drop-shadow(0 0 8px var(--color-primary))
+    drop-shadow(0 0 20px var(--color-glow));
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 3.7rem;
+  }
+}

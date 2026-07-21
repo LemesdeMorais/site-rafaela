@@ -1,0 +1,75 @@
+.prologue {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: var(--space-lg);
+
+  min-height: calc(72svh - (var(--space-4xl) * 2));
+
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0;
+
+  color: var(--color-secondary);
+  font-size: var(--text-sm);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.prologue {
+  h1 {
+    max-width: 850px;
+    margin: 0;
+
+    color: var(--color-text);
+    font-size: var(--text-display);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+
+    text-wrap: balance;
+  }
+}
+
+.description {
+  max-width: 650px;
+  margin: 0;
+
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+  line-height: 1.8;
+}
+
+.sequence {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-md);
+
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .prologue {
+    gap: 1.5rem;
+    min-height: calc(70svh - 9rem);
+
+    h1 {
+      max-width: 19rem;
+      font-size: clamp(2.15rem, 10vw, 3rem);
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+  }
+
+  .sequence {
+    gap: 1rem;
+  }
+
+  .description {
+    max-width: 21rem;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
