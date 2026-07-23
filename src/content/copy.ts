@@ -153,9 +153,62 @@ export const copy = {
 
   contact: {
     eyebrow: "Vamos conversar",
-    title: "Tem uma ideia, um projeto ou um negócio que precisa ganhar vida?",
+
+    title: "Seu próximo projeto pode começar com uma boa conversa.",
+
     description:
-      "Me conte o que você precisa. Vamos conversar de forma simples e entender qual solução faz sentido para você.",
+      "Conte um pouco sobre sua ideia, seu negócio ou o desafio que você precisa resolver. Vamos entender juntos qual solução faz sentido para você.",
+
     button: "Falar comigo no WhatsApp",
+
+    whatsapp: {
+      phone: "5519999644110",
+      message: "Olá Rafaela, quero conversar sobre um projeto e entender como você pode me ajudar.",
+    },
+  },
+
+  footer: {
+    eyebrow: "Portfólio profissional",
+
+    name: "Rafaela Lemes",
+
+    role: "Desenvolvedora Full Stack • Dados & Analytics",
+
+    navigation: [
+      {
+        label: "Início",
+        href: "#apresentacao",
+      },
+      {
+        label: "Soluções",
+        href: "#solucoes",
+      },
+      {
+        label: "Projetos",
+        href: "#projetos",
+      },
+      {
+        label: "Sobre",
+        href: "#sobre",
+      },
+      {
+        label: "Contato",
+        href: "#contato",
+      },
+    ],
+
+    github: {
+      label: "GitHub",
+      url: "https://github.com/LemesdeMorais",
+    },
+
+    linkedin: {
+      label: "LinkedIn",
+      url: "https://www.linkedin.com/in/rafaela-lemes/",
+    },
+
+    signature: "Desenvolvido com {heart} e café por Rafaela Lemes",
+
+    copyright: `© ${new Date().getFullYear()} Rafaela Lemes`,
   },
 };
