@@ -39,7 +39,11 @@ export function Presentation() {
 
             <Reveal delay={0.3}>
               <div className={styles.actions}>
-                <Button href="#contato">
+                <Button
+                  href="https://wa.me/19999644110?text=Olá%2C%20Rafaela!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {hero.primaryButton}
                   <span aria-hidden="true">→</span>
                 </Button>
