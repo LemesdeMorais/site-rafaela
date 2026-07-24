@@ -5,10 +5,10 @@ import "@fontsource/geist/400.css";
 import "@fontsource/geist/500.css";
 import "@fontsource/geist/600.css";
 import "@fontsource/geist/700.css";
+import "@fontsource/allura";
 
 import "./index.scss";
 
-import "./index.scss";
 import App from "./App";
 
 createRoot(document.getElementById("root")!).render(
