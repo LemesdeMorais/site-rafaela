@@ -14,7 +14,7 @@ const links = [
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(() => window.scrollY > 24);
   const [activeSection, setActiveSection] = useState("apresentacao");
 
   useEffect(() => {
