@@ -3,6 +3,22 @@
   <head>
     <meta charset="UTF-8" />
 
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem("theme");
+        const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+
+        const theme =
+          savedTheme === "light" || savedTheme === "dark"
+            ? savedTheme
+            : prefersLight
+              ? "light"
+              : "dark";
+
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+
     <link
       rel="preload"
       href="/fonts/allura-latin-400-normal.woff2"
