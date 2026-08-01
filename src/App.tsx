@@ -10,11 +10,13 @@ import { Presentation } from "@/components/sections/Presentation";
 import { Projects } from "@/components/sections/Projects";
 import { Prologue } from "@/components/sections/Prologue";
 import { Solutions } from "@/components/sections/Solutions";
+import { StructuredData } from "@/components/seo/StructuredData";
 
 function App() {
   return (
     <>
       <Header />
+      <StructuredData />
 
       <PointerEffects>
         <main className={styles.app}>

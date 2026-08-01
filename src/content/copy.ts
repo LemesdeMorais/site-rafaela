@@ -204,7 +204,7 @@ export const copy = {
 
     linkedin: {
       label: "LinkedIn",
-      url: "https://www.linkedin.com/in/rafaela-lemes/",
+      url: "https://www.linkedin.com/in/rafamorais/",
     },
 
     signature: "Desenvolvido com {heart} e café por Rafaela Lemes",
